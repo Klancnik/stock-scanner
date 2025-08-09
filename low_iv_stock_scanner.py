@@ -4,7 +4,7 @@ import numpy as np
 from datetime import datetime
 
 # Define a list of stock tickers to scan (small set for prototyping)
-tickers = ["AAPL", "MSFT", "TSLA", "JPM", "WMT", "PG", "XOM", "PFE"]
+tickers = ["AAPL", "AMAT", "TSM", "NFLX", "GEV", "MSFT", "TSLA", "JPM", "WMT", "PG", "XOM", "PFE", "GOOGL", "AMZN", "NVDA", "META", "BAC", "KO", "CVX", "INTC", "CSCO", "DIS", "IBM", "HON"]
 
 # Function to fetch implied volatility from options data
 def get_implied_volatility(ticker):
