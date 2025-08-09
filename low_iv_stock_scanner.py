@@ -65,9 +65,14 @@ def scan_low_iv_stocks(tickers, percentile=20):
 if __name__ == "__main__":
     print(f"Scanning stocks for low implied volatility on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     low_iv_df = scan_low_iv_stocks(tickers)
-    
+   
     if low_iv_df is not None and not low_iv_df.empty:
         print("\nStocks with low implied volatility (below 20th percentile):")
         print(low_iv_df)
     else:
         print("No stocks found with low implied volatility.")
+    if low_iv_df is not None and not low_iv_df.empty:
+        low_iv_df.to_csv('output.txt', index=False)
+    else:
+        with open('output.txt', 'w') as f:
+            f.write("No stocks found with low implied volatility.")
